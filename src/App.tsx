@@ -128,7 +128,7 @@ export default function App() {
       issuer: "FES GO WORLD",
       date: "15 Juni 2025",
       description: "Terpilih sebagai peserta dalam program seleksi wirausaha muda masa depan, mempelajari dasar-dasar membangun bisnis yang berkelanjutan.",
-      image: "public/images/fesgo2.jpeg"
+      image: "/images/fesgo2.jpeg"
     },
     {
       title: "Cisco Academy – Networking Operating System Basic",
