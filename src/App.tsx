@@ -58,13 +58,13 @@ export default function App() {
     {
       title: "Katalog Rental Mobil Naivara Group",
       date: "Oktober 2025",
-      image: "/public/images/Naivara.png",
+      image: "/images/Naivara.png",
       description: "Aplikasi berbasis web untuk mengelola katalog penyewaan mobil, memudahkan pelanggan dalam melihat ketersediaan unit dan melakukan pemesanan secara online."
     },
     {
       title: "Profile Company HDBAirconds.id",
       date: "September 2025",
-      image: "/public/images/Hdb.png",
+      image: "/images/Hdb.png",
       description: "Website company profile profesional yang merangkum layanan pendingin ruangan, portofolio proyek, dan mempermudah calon klien untuk menghubungi perusahaan."
     }
   ];
@@ -76,7 +76,7 @@ export default function App() {
       date: "2024",
       description: "Terlibat aktif dalam penyusunan proposal Program Kreativitas Mahasiswa bidang Karsa Cipta. Berkolaborasi dengan tim untuk merancang solusi inovatif berbasis teknologi yang dapat memberikan dampak positif bagi masyarakat.",
       images: [
-        "https://cms-resources.prd.timeshighereducation.com/sites/default/files/styles/featured_image/public/2023-08/Four%20strategies%20that%20rethink%20whole%20group%20discussions.jpg?itok=9ErMTi8O",
+        "https://cms-resources.prd.timeshighereducation.com/sites/default/files/styles/featured_image/2023-08/Four%20strategies%20that%20rethink%20whole%20group%20discussions.jpg?itok=9ErMTi8O",
         "https://ftk.unisnu.ac.id/assets/media/pkmos5.jpg",
         "https://wpvip.edutopia.org/wp-content/uploads/2024/07/iStock-1442227275-CROP.jpg?w=2880&quality=85"
       ]
@@ -87,9 +87,9 @@ export default function App() {
       date: "2025",
       description: "Berperan dalam kepanitiaan Pekan Prestasi Mahasiswa sebagai bagian dari Sie Humas, dengan tanggung jawab mengelola komunikasi dan penyebaran informasi kegiatan. Juga dipercaya sebagai Master of Ceremony (MC), memandu jalannya acara dengan baik, menjaga alur tetap terstruktur, serta menciptakan suasana yang interaktif dan profesional.",
       images: [
-        "/public/images/PPM.jpeg",
-        "/public/images/PPM2.jpeg",
-        "/public/images/PPM3.jpeg"
+        "/images/PPM.jpeg",
+        "/images/PPM2.jpeg",
+        "/images/PPM3.jpeg"
       ]
     },
     {
@@ -98,9 +98,9 @@ export default function App() {
     date: "2025 - Sekarang",
     description: "Memimpin Divisi Musik UKM Seni Polinema dengan mengoordinasikan anggota, merancang konsep penampilan, serta memastikan kualitas musikal dalam setiap kegiatan dan event kampus tetap optimal.",
     images: [
-      "/public/images/Kadiv1.jpeg",
-      "/public/images/Kadiv2.jpeg",
-      "/public/images/Kadiv1.jpeg"
+      "/images/Kadiv1.jpeg",
+      "/images/Kadiv2.jpeg",
+      "/images/Kadiv1.jpeg"
     ]
   }
   ];
@@ -111,14 +111,14 @@ export default function App() {
       major: "D3 Manajemen Informatika",
       date: "2024 - Sekarang",
       description: "Fokus pada pengembangan perangkat lunak, administrasi jaringan, dan manajemen basis data. Aktif dalam berbagai proyek praktikum yang mengasah kemampuan problem-solving.",
-      image: "/public/images/Polinema3.webp"
+      image: "/images/Polinema3.webp"
     },
     {
       school: "SMAN 1 Pacet",
       major: "Ilmu Pengetahuan Sosial",
       date: "2021 - 2024",
       description: "Selama menempuh pendidikan di jurusan Ilmu Pengetahuan Sosial (IPS), aktif dalam organisasi dan ekstrakurikuler fotografi sebagai Wakil Ketua. Bertanggung jawab dalam koordinasi tim, pelaksanaan kegiatan, serta pengembangan kreativitas dan kolaborasi antar anggota.",
-      image: "/public/images/SMAN1Pacet.jpg"
+      image: "/images/SMAN1Pacet.jpg"
     }
   ];
 
@@ -135,14 +135,14 @@ export default function App() {
       issuer: "Cisco",
       date: "18 Juni 2025",
       description: "Menyelesaikan pelatihan dasar sistem operasi jaringan, mencakup konfigurasi router, switch, dan pemahaman topologi jaringan.",
-      image: "/public/images/Cisco.jpeg"
+      image: "/images/Cisco.jpeg"
     },
     {
       title: "Grow Mindset for Futurepreneur – Public Speaking",
       issuer: "Grow Insight",
       date: "15 Juni 2025",
       description: "Mengikuti pelatihan intensif public speaking untuk meningkatkan kepercayaan diri dan kemampuan komunikasi efektif di depan umum.",
-      image: "/public/images/fesgo1.jpeg"
+      image: "/images/fesgo1.jpeg"
     }
   ];
 
