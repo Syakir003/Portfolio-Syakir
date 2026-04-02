@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Linkedin } from 'lucide-react';
+import { Linkedin,Github } from 'lucide-react';
 import { motion, AnimatePresence, useScroll, useSpring, easeInOut } from 'framer-motion';
 import { 
   Menu,
@@ -555,7 +555,7 @@ export default function App() {
                      <div className="w-12 h-12 rounded-full border border-[#1A1A1A]/20 flex items-center justify-center group-hover:bg-[#1A1A1A] group-hover:text-[#F5F2ED] transition-all duration-300">
                        <Github size={18} strokeWidth={1.5} />
                      </div>
-                     <span span className="font-light text-lg group-hover:translate-x-2 transition-transform duration-300">Github</span>
+                     <span className="font-light text-lg group-hover:translate-x-2 transition-transform duration-300">Github</span>
                    </a>
                 </Magnetic>
               </div>
