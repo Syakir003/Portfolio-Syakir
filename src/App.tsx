@@ -543,6 +543,7 @@ export default function App() {
                   </div>
                 </Magnetic>
                 <Magnetic>
+                  <a href="https://github.com/Syakir003" className="text-zinc-500 hover:text-white transition-colors"><Github size={32} />
                   <a href="https://www.linkedin.com/in/akhmad-abdullah-syakir-bb49282b7/" className="group flex items-center gap-6 hover-trigger w-fit">
                     <div className="w-12 h-12 rounded-full border border-[#1A1A1A]/20 flex items-center justify-center group-hover:bg-[#1A1A1A] group-hover:text-[#F5F2ED] transition-all duration-300">
                       <Linkedin size={18} strokeWidth={1.5} />
