@@ -41,14 +41,17 @@ export default function App() {
   ];
 
   const skills = [
-  'Web Development',
-  'Frontend Development',
-  'React & TypeScript',
-  'UI/UX Design',
-  'Database (MySQL)',
-  'Jaringan Komputer',
+  'Laravel & PHP',
+  'React & Next.js',
+  'Vue.js',
+  'Node.js/Express',
+  'TypeScript',
+  'Android Studio (Kotlin)',
+  'MySQL & Firebase',
+  'ESP32 & MicroPython',
+  'UI/UX Design (Figma)',
+  'Linux Server & Nginx',
   'Git & GitHub',
-  'Problem Solving',
   'Kepemimpinan Tim',
   'Public Speaking',
   'Manajemen Waktu'
@@ -56,16 +59,28 @@ export default function App() {
 
   const projects: Project[] = [
     {
-      title: "Katalog Rental Mobil Naivara Group",
-      date: "Oktober 2025",
-      image: "/images/Naivara.png",
-      description: "Aplikasi berbasis web untuk mengelola katalog penyewaan mobil, memudahkan pelanggan dalam melihat ketersediaan unit dan melakukan pemesanan secara online."
+      title: "CV Ayub Podo Rukun — E-POS System",
+      date: "2026 - Sedang Berjalan",
+      image: "https://picsum.photos/seed/ayubpodorukun/800/600",
+      description: "Sebagai Project Lead, memimpin tim 3 developer merancang dan membangun 3 produk digital terintegrasi (company profile, E-POS web, E-POS mobile) untuk bisnis HVAC klien senilai 30 juta, mulai dari arsitektur sistem hingga deployment menggunakan Laravel, Next.js/React, dan MySQL."
     },
     {
-      title: "Profile Company HDBAirconds.id",
-      date: "September 2025",
+      title: "HDB AC Shop — E-Commerce & Service Platform",
+      date: "2025",
       image: "/images/Hdb.png",
-      description: "Website company profile profesional yang merangkum layanan pendingin ruangan, portofolio proyek, dan mempermudah calon klien untuk menghubungi perusahaan."
+      description: "Membangun platform full-stack e-commerce dan manajemen servis AC menggunakan React, TypeScript, dan Node.js/Express, lengkap dengan autentikasi JWT multi-role dan integrasi payment gateway Midtrans (QRIS, transfer bank, e-wallet)."
+    },
+    {
+      title: "CV Blitaris Tekno — Stabilisasi Aplikasi Produksi",
+      date: "1 Juli 2026 - 21 Agustus 2026",
+      image: "https://picsum.photos/seed/blitaristekno/800/600",
+      description: "Mewarisi aplikasi web produksi (Laravel & Vue.js) yang sebelumnya tidak stabil, lalu melakukan debugging dan refactoring menyeluruh, memperbaiki 150+ bug yang berdampak pada stabilitas sistem hingga siap dipakai lagi."
+    },
+    {
+      title: "Katalog Rental Mobil Naivara Group",
+      date: "2025",
+      image: "/images/Naivara.png",
+      description: "Membangun frontend katalog rental mobil menggunakan Laravel Blade, menampilkan 20 unit kendaraan secara responsif dengan integrasi data dinamis dari backend untuk update real-time tanpa reload manual."
     }
   ];
 
@@ -83,9 +98,9 @@ export default function App() {
     },
     {
       title: "Pekan Prestasi Mahasiswa",
-      organization: "UKM Seni - Sie Humas",
-      date: "2025",
-      description: "Berperan dalam kepanitiaan Pekan Prestasi Mahasiswa sebagai bagian dari Sie Humas, dengan tanggung jawab mengelola komunikasi dan penyebaran informasi kegiatan. Juga dipercaya sebagai Master of Ceremony (MC), memandu jalannya acara dengan baik, menjaga alur tetap terstruktur, serta menciptakan suasana yang interaktif dan profesional.",
+      organization: "UKM Seni Polinema - Humas (Public Relations)",
+      date: "2024",
+      description: "Mengelola komunikasi eksternal dan hubungan dengan sponsor serta media partner, mencari dan mengamankan sponsorship dari berbagai organisasi, serta melakukan outreach dan networking dengan stakeholder eksternal untuk memastikan publikasi event berjalan efektif.",
       images: [
         "/images/PPM.jpeg",
         "/images/PPM2.jpeg",
@@ -96,7 +111,7 @@ export default function App() {
     title: "Ketua Divisi Musik",
     organization: "UKM Seni Polinema",
     date: "2025 - Sekarang",
-    description: "Memimpin Divisi Musik UKM Seni Polinema dengan mengoordinasikan anggota, merancang konsep penampilan, serta memastikan kualitas musikal dalam setiap kegiatan dan event kampus tetap optimal.",
+    description: "Memimpin divisi musik beranggotakan 24 orang, menyusun program kerja dan strategi pengembangan anggota, mengatur jadwal latihan dan evaluasi performa, menghasilkan 4 penampilan sukses dalam acara kampus dan luar kampus.",
     images: [
       "/images/Kadiv1.jpeg",
       "/images/Kadiv2.jpeg",
@@ -110,7 +125,7 @@ export default function App() {
       school: "Politeknik Negeri Malang",
       major: "D3 Manajemen Informatika",
       date: "2024 - Sekarang",
-      description: "Fokus pada pengembangan perangkat lunak, administrasi jaringan, dan manajemen basis data. Aktif dalam berbagai proyek praktikum yang mengasah kemampuan problem-solving.",
+      description: "IPK 3,75 (Sementara). Fokus pada pengembangan perangkat lunak, administrasi jaringan, dan manajemen basis data. Aktif dalam berbagai proyek praktikum yang mengasah kemampuan problem-solving.",
       image: "/images/Polinema3.webp"
     },
     {
@@ -270,7 +285,7 @@ export default function App() {
               
               <motion.div variants={fadeUp} className="mt-8 md:mt-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
                 <p className="text-lg md:text-xl text-[#1A1A1A]/60 font-light max-w-md leading-relaxed">
-                  Crafting elegant, functional, and minimal digital experiences with a focus on web and software development.
+                  Fullstack developer & project lead crafting elegant, functional digital experiences — from architecture to deployment.
                 </p>
                 <div className="flex gap-6">
                   <button onClick={() => scrollTo('projects')} className="font-mono text-[20px] uppercase tracking-[0.2em] font-medium border-b border-[#1A1A1A]/30 pb-1 hover:border-[#1A1A1A] transition-colors hover-trigger">Lihat Proyek</button>
@@ -286,7 +301,7 @@ export default function App() {
           <div className="flex whitespace-nowrap animate-marquee">
             {[...Array(4)].map((_, i) => (
               <span key={i} className="text-3xl md:text-5xl font-display font-bold uppercase tracking-widest mx-8 text-[#1A1A1A]/70">
-                Creative Developer <span className="text-[#1A1A1A]/20 mx-4 font-sans font-normal">•</span> UI/UX Enthusiast <span className="text-[#1A1A1A]/20 mx-4 font-sans font-normal">•</span> Problem Solver <span className="text-[#1A1A1A]/20 mx-4 font-sans font-normal">•</span>
+                Fullstack Developer <span className="text-[#1A1A1A]/20 mx-4 font-sans font-normal">•</span> Project Lead <span className="text-[#1A1A1A]/20 mx-4 font-sans font-normal">•</span> Problem Solver <span className="text-[#1A1A1A]/20 mx-4 font-sans font-normal">•</span>
               </span>
             ))}
           </div>
@@ -305,10 +320,11 @@ export default function App() {
                 <motion.p 
                   initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp}
                   className="font-display font-medium text-3xl md:text-4xl lg:text-3xl leading-snug text-[#1A1A1A] mb-16 tracking-tight"
-                >Mahasiswa Manajemen Informatika di Politeknik Negeri Malang yang berfokus pada pengembangan web dan software. Memiliki ketertarikan dalam menciptakan produk digital yang tidak hanya fungsional, tetapi juga memiliki nilai estetika.
-                  Selain aktif dalam pengembangan teknologi, juga berperan sebagai Ketua Divisi Musik UKM Seni Polinema, menggabungkan kreativitas dan kepemimpinan dalam setiap proyek yang dijalankan. 
-                  Terbiasa bekerja dalam tim, adaptif terhadap tantangan, dan terus mengembangkan kemampuan di bidang teknologi.
-                  Memiliki ketertarikan mendalam pada <span className="text-[#1A1A1A]/50">Web Development</span> dan <span className="text-[#1A1A1A]/50">Software Engineering</span>.
+                >Mahasiswa D3 Manajemen Informatika di Politeknik Negeri Malang dengan pengalaman fullstack development menggunakan Laravel, React, Vue.js, dan Node.js.
+                  Pernah memimpin tim 3 developer mengerjakan project klien senilai 30+ juta, mencakup Web + Mobile E-POS, platform E-Commerce, dan Company Profile — dari planning hingga deployment.
+                  Berpengalaman menangani payment gateway integration, authentication system, dan real-time dashboard, termasuk mewarisi dan menstabilkan aplikasi produksi dengan memperbaiki 150+ bug.
+                  Selain aktif dalam pengembangan teknologi, juga berperan sebagai Ketua Divisi Musik UKM Seni Polinema, mengelola 24 anggota dan mengorganisir berbagai penampilan.
+                  Memiliki ketertarikan mendalam pada <span className="text-[#1A1A1A]/50">Fullstack Development</span> dan <span className="text-[#1A1A1A]/50">Software Engineering</span>.
                 </motion.p>
 
                 <motion.div 
