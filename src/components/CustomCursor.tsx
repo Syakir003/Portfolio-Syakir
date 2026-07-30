@@ -35,12 +35,19 @@ export default function CustomCursor() {
       }
     };
 
+    const handleDocumentLeave = () => {
+      setIsHovering(false);
+      setPreview(null);
+    };
+
     window.addEventListener('mousemove', updateMousePosition);
     window.addEventListener('mouseover', handleMouseOver);
+    document.addEventListener('mouseleave', handleDocumentLeave);
 
     return () => {
       window.removeEventListener('mousemove', updateMousePosition);
       window.removeEventListener('mouseover', handleMouseOver);
+      document.removeEventListener('mouseleave', handleDocumentLeave);
     };
   }, []);
 
