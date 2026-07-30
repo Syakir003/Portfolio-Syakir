@@ -341,10 +341,10 @@ export default function App() {
               }}
               className="w-full relative"
             > 
-              <h1 className="flex flex-col text-[15vw] md:text-[11vw] leading-[0.85] tracking-tighter uppercase font-display font-bold">
-                <div className="overflow-hidden pb-2 md:pb-4"><motion.span variants={textReveal} className="block text-outline origin-bottom-left" style={{ fontFamily: 'Poppins, sans-serif' }}>AKHMAD</motion.span></div>
-                <div className="overflow-hidden pb-2 md:pb-4"><motion.span variants={textReveal} className="block ml-[10vw] md:ml-[15vw] origin-bottom-left" style={{ fontFamily: 'Poppins, sans-serif' }}>ABDULLAH</motion.span></div>
-                <div className="overflow-hidden pb-2 md:pb-4"><motion.span variants={textReveal} className="block font-display font-bold text-[15vw] md:text-[11vw] leading-[0.85] text-[#1A1A1A] ml-[5vw] md:ml-[8vw] origin-bottom-left drop-shadow-[0_5px_20px_rgba(0,0,0,0.15)]" style={{ fontFamily: 'Poppins, sans-serif' }}>SYAKIR</motion.span></div>
+              <h1 className="flex flex-col text-[10vw] md:text-[6.5vw] leading-[0.95] tracking-tight uppercase font-serif font-semibold">
+                <div className="overflow-hidden pb-2 md:pb-3"><motion.span variants={textReveal} className="block text-outline origin-bottom-left">AKHMAD</motion.span></div>
+                <div className="overflow-hidden pb-2 md:pb-3"><motion.span variants={textReveal} className="block ml-[10vw] md:ml-[15vw] origin-bottom-left">ABDULLAH</motion.span></div>
+                <div className="overflow-hidden pb-2 md:pb-3"><motion.span variants={textReveal} className="block text-[#1A1A1A] ml-[5vw] md:ml-[8vw] origin-bottom-left drop-shadow-[0_5px_20px_rgba(0,0,0,0.15)]">SYAKIR</motion.span></div>
               </h1>
               
               <motion.div variants={fadeUp} className="mt-8 md:mt-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
