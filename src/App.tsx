@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { Linkedin,Github } from 'lucide-react';
 import { motion, AnimatePresence, useScroll, useSpring, easeInOut } from 'framer-motion';
 import { 
@@ -13,6 +13,8 @@ import {
 import { Project, Experience, Education, Certificate } from './types';
 import CustomCursor from './components/CustomCursor';
 import Magnetic from './components/Magnetic';
+
+const HeroMesh = lazy(() => import('./components/HeroMesh'));
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -264,8 +266,10 @@ export default function App() {
             <div className="absolute inset-0 bg-linear-to-b from-[#F5F2ED]/10 via-[#F5F2ED]/10 to-[#F5F2ED]/80" />
           </div>
           
-          {/* Abstract Glow */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] md:w-[40vw] md:h-[40vw] bg-[#1A1A1A]/5 rounded-full blur-[100px] -z-10 pointer-events-none" />
+          {/* Abstract Glow / 3D accent */}
+          <Suspense fallback={<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] md:w-[40vw] md:h-[40vw] bg-[#1A1A1A]/5 rounded-full blur-[100px] -z-10 pointer-events-none" />}>
+            <HeroMesh />
+          </Suspense>
           
           <div className="max-w-7xl mx-auto w-full px-6 md:px-12 z-10">
             <motion.div
