@@ -1,10 +1,9 @@
 import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { Linkedin,Github } from 'lucide-react';
 import { motion, AnimatePresence, useScroll, useSpring, easeInOut } from 'framer-motion';
-import { 
+import {
   Menu,
   X,
-  ArrowRight,
   Mail,
   MapPin,
   Phone
@@ -16,10 +15,12 @@ import Magnetic from './components/Magnetic';
 
 const HeroMesh = lazy(() => import('./components/HeroMesh'));
 import MetricsSection from './components/MetricsSection';
+import ProjectCard from './components/ProjectCard';
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [expandedProject, setExpandedProject] = useState<number | null>(null);
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -392,38 +393,13 @@ export default function App() {
 
             <div className="grid md:grid-cols-2 gap-12 md:gap-20">
               {projects.map((project, index) => (
-                <motion.div
+                <ProjectCard
                   key={project.title}
-                  initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} 
-                  variants={{
-                    hidden: { opacity: 0, y: 40 },
-                    visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: index * 0.2, ease: [0.22, 1, 0.36, 1] } }
-                  }}
-                  className="group cursor-pointer hover-trigger"
-                >
-                  <div className="overflow-hidden mb-8 bg-[#EAE6DF] rounded-sm">
-                    <img 
-                      src={project.image} 
-                      alt={project.title} 
-                      className="w-full aspect-4/3 object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000 ease-out"
-                      referrerPolicy="no-referrer"
-                    />
-                  </div>
-                  <div className="flex flex-col gap-4">
-                    <div className="flex justify-between items-start gap-4">
-                      <h3 className="font-display font-bold text-3xl md:text-4xl group-hover:tracking-widest transition-all duration-500 uppercase">
-                        {project.title}
-                      </h3>
-                      <ArrowRight className="opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 text-[#1A1A1A]" strokeWidth={1.5} size={28} />
-                    </div>
-                    <p className="text-[#1A1A1A]/60 font-light leading-relaxed max-w-md">
-                      {project.description}
-                    </p>
-                    <span className="font-mono text-[15px] uppercase tracking-[0.2em] font-medium text-[#1A1A1A]/40 mt-2">
-                      {project.date}
-                    </span>
-                  </div>
-                </motion.div>
+                  project={project}
+                  index={index}
+                  isExpanded={expandedProject === index}
+                  onToggle={() => setExpandedProject(expandedProject === index ? null : index)}
+                />
               ))}
             </div>
           </div>
