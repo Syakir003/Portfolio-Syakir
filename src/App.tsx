@@ -65,25 +65,52 @@ export default function App() {
       title: "CV Ayub Podo Rukun — E-POS System",
       date: "2026 - Sedang Berjalan",
       image: "https://picsum.photos/seed/ayubpodorukun/800/600",
-      description: "Sebagai Project Lead, memimpin tim 3 developer merancang dan membangun 3 produk digital terintegrasi (company profile, E-POS web, E-POS mobile) untuk bisnis HVAC klien senilai 30 juta, mulai dari arsitektur sistem hingga deployment menggunakan Laravel, Next.js/React, dan MySQL."
+      description: "Sebagai Project Lead, memimpin tim 3 developer merancang dan membangun 3 produk digital terintegrasi (company profile, E-POS web, E-POS mobile) untuk bisnis HVAC klien senilai 30 juta, mulai dari arsitektur sistem hingga deployment menggunakan Laravel, Next.js/React, dan MySQL.",
+      role: "Project Lead & Fullstack Developer",
+      techStack: ["Laravel", "Next.js/React", "MySQL"],
+      highlights: [
+        "Memimpin tim 3 developer merancang 3 produk digital terintegrasi dari requirement hingga deployment",
+        "Merancang arsitektur sistem dan skema database untuk operasional bisnis HVAC klien",
+        "Menjadi single point of contact antara tim dan klien"
+      ]
     },
     {
       title: "HDB AC Shop — E-Commerce & Service Platform",
       date: "2025",
       image: "/images/Hdb.png",
-      description: "Membangun platform full-stack e-commerce dan manajemen servis AC menggunakan React, TypeScript, dan Node.js/Express, lengkap dengan autentikasi JWT multi-role dan integrasi payment gateway Midtrans (QRIS, transfer bank, e-wallet)."
+      description: "Membangun platform full-stack e-commerce dan manajemen servis AC menggunakan React, TypeScript, dan Node.js/Express, lengkap dengan autentikasi JWT multi-role dan integrasi payment gateway Midtrans (QRIS, transfer bank, e-wallet).",
+      role: "Fullstack Developer",
+      techStack: ["React", "TypeScript", "Node.js/Express", "MySQL 8.0", "Midtrans"],
+      highlights: [
+        "Autentikasi JWT multi-role (customer, admin, teknisi)",
+        "Integrasi payment gateway Midtrans: QRIS, transfer bank, e-wallet",
+        "Admin dashboard dengan analitik penjualan dan tracking order real-time"
+      ]
     },
     {
       title: "CV Blitaris Tekno — Stabilisasi Aplikasi Produksi",
       date: "1 Juli 2026 - 21 Agustus 2026",
       image: "https://picsum.photos/seed/blitaristekno/800/600",
-      description: "Mewarisi aplikasi web produksi (Laravel & Vue.js) yang sebelumnya tidak stabil, lalu melakukan debugging dan refactoring menyeluruh, memperbaiki 150+ bug yang berdampak pada stabilitas sistem hingga siap dipakai lagi."
+      description: "Mewarisi aplikasi web produksi (Laravel & Vue.js) yang sebelumnya tidak stabil, lalu melakukan debugging dan refactoring menyeluruh, memperbaiki 150+ bug yang berdampak pada stabilitas sistem hingga siap dipakai lagi.",
+      role: "Fullstack Developer (Magang)",
+      techStack: ["Laravel", "Vue.js (Vite)", "MySQL"],
+      highlights: [
+        "Mewarisi aplikasi produksi yang sebelumnya tidak stabil",
+        "Memperbaiki 150+ bug yang berdampak pada stabilitas aplikasi",
+        "Pengujian keamanan dasar: validasi input dan autentikasi"
+      ]
     },
     {
       title: "Katalog Rental Mobil Naivara Group",
       date: "2025",
       image: "/images/Naivara.png",
-      description: "Membangun frontend katalog rental mobil menggunakan Laravel Blade, menampilkan 20 unit kendaraan secara responsif dengan integrasi data dinamis dari backend untuk update real-time tanpa reload manual."
+      description: "Membangun frontend katalog rental mobil menggunakan Laravel Blade, menampilkan 20 unit kendaraan secara responsif dengan integrasi data dinamis dari backend untuk update real-time tanpa reload manual.",
+      role: "Frontend Developer",
+      techStack: ["Laravel Blade"],
+      highlights: [
+        "Menampilkan 20 unit kendaraan secara responsif",
+        "Update data real-time tanpa reload manual"
+      ]
     }
   ];
 

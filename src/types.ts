@@ -3,6 +3,9 @@ export interface Project {
   date: string;
   image: string;
   description: string;
+  role?: string;
+  techStack?: string[];
+  highlights?: string[];
 }
 
 export interface Experience {
