@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { Project } from '../types';
 import useReducedMotion from '../hooks/useReducedMotion';
+import useTilt from '../hooks/useTilt';
 
 interface ProjectCardProps {
   project: Project;
@@ -13,9 +14,20 @@ interface ProjectCardProps {
 export default function ProjectCard({ project, index, isExpanded, onToggle }: ProjectCardProps) {
   const reducedMotion = useReducedMotion();
   const detailTransition = reducedMotion ? { duration: 0 } : { duration: 0.3, ease: 'easeOut' as const };
+  const tilt = useTilt(4);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!isExpanded) tilt.onMouseMove(e);
+  };
+
+  const handleToggle = () => {
+    tilt.onMouseLeave();
+    onToggle();
+  };
 
   return (
     <motion.div
+      ref={tilt.ref}
       layout
       initial="hidden"
       whileInView="visible"
@@ -24,8 +36,11 @@ export default function ProjectCard({ project, index, isExpanded, onToggle }: Pr
         hidden: { opacity: 0, y: 40 },
         visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: index * 0.2, ease: [0.22, 1, 0.36, 1] } },
       }}
+      style={{ rotateX: tilt.rotateX, rotateY: tilt.rotateY, transformPerspective: 800 }}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={tilt.onMouseLeave}
       className={`group cursor-pointer hover-trigger ${isExpanded ? 'md:col-span-2' : ''}`}
-      onClick={onToggle}
+      onClick={handleToggle}
       data-cursor-preview={project.image}
       data-cursor-label={isExpanded ? 'Close' : 'View'}
     >

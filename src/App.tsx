@@ -18,6 +18,8 @@ import MetricsSection from './components/MetricsSection';
 import ProjectCard from './components/ProjectCard';
 import CommandPalette, { CommandItem } from './components/CommandPalette';
 import TechStackBackground from './components/TechStackBackground';
+import CertificateCard from './components/CertificateCard';
+import Particles from './components/Particles';
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,6 +38,26 @@ export default function App() {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const [activeSection, setActiveSection] = useState('');
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: '-40% 0px -40% 0px', threshold: 0 }
+    );
+    navItems.forEach((item) => {
+      const el = document.getElementById(item.id);
+      if (el) observer.observe(el);
+    });
+    return () => observer.disconnect();
   }, []);
 
   const navItems = [
@@ -278,7 +300,11 @@ export default function App() {
                 <Magnetic>
                   <button
                     onClick={() => scrollTo(item.id)}
-                    className="text-[12px] uppercase tracking-[0.25em] font-medium text-[#1A1A1A]/60 hover:text-[#1A1A1A] transition-colors hover-trigger p-2"
+                    className={`text-[12px] uppercase tracking-[0.25em] font-medium transition-colors hover-trigger p-2 border-b ${
+                      activeSection === item.id
+                        ? 'text-[#1A1A1A] border-[#1A1A1A]'
+                        : 'text-[#1A1A1A]/60 hover:text-[#1A1A1A] border-transparent'
+                    }`}
                   >
                     {item.label}
                   </button>
@@ -310,7 +336,9 @@ export default function App() {
               <button
                 key={item.id}
                 onClick={() => scrollTo(item.id)}
-                className="font-display font-bold text-3xl uppercase tracking-widest text-[#1A1A1A] hover:text-[#1A1A1A]/50 transition-colors hover-trigger"
+                className={`font-display font-bold text-3xl uppercase tracking-widest transition-colors hover-trigger ${
+                  activeSection === item.id ? 'text-[#1A1A1A]' : 'text-[#1A1A1A]/50 hover:text-[#1A1A1A]'
+                }`}
               >
                 {item.label}
               </button>
@@ -529,42 +557,19 @@ export default function App() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-x-12 gap-y-16">
-              {certificates.map((cert, index) => (
-                <motion.div
-                  key={cert.title}
-                  initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} 
-                  variants={fadeUp}
-                  className="group hover-trigger"
-                >
-                  <div className="overflow-hidden mb-8 bg-[#EAE6DF] p-8 border border-[#1A1A1A]/5">
-                    <img 
-                      src={cert.image} 
-                      alt={cert.title} 
-                      className="w-full aspect-4/3 object-contain opacity-100 group-hover:opacity-100 group-hover:scale-105 transition-transform duration-700 ease-out"
-                      referrerPolicy="no-referrer"
-                    />
-                  </div>
-                  <h3 className="font-display font-bold text-xl mb-4 leading-snug group-hover:tracking-widest transition-all duration-500 uppercase">
-                    {cert.title}
-                  </h3>
-                  <div className="flex flex-col gap-2 mb-4">
-                    <p className="text-[#1A1A1A]/80 font-medium text-xs">{cert.issuer}</p>
-                    <p className="font-mono text-[15px] uppercase tracking-[0.2em] font-medium text-[#1A1A1A]/40">{cert.date}</p>
-                  </div>
-                  {cert.description && (
-                    <p className="text-[#1A1A1A]/60 font-light leading-relaxed text-xs">{cert.description}</p>
-                  )}
-                </motion.div>
+              {certificates.map((cert) => (
+                <CertificateCard key={cert.title} cert={cert} fadeUp={fadeUp} />
               ))}
             </div>
           </div>
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="py-32 px-6 md:px-12 bg-[#EBE8E3]">
-          <div className="max-w-7xl mx-auto">
+        <section id="contact" className="relative py-32 px-6 md:px-12 bg-[#EBE8E3] overflow-hidden">
+          <Particles color="rgba(26,26,26,0.25)" lineColor="rgba(26,26,26,0.1)" count={60} speed={0.3} />
+          <div className="max-w-7xl mx-auto relative z-10">
             <div className="hairline mb-24" />
-            
+
             <motion.div
               initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp}
               className="flex flex-col md:flex-row justify-between items-start gap-16"

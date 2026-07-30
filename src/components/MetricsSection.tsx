@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, useInView, useMotionValue, useTransform, animate } from 'framer-motion';
 import useReducedMotion from '../hooks/useReducedMotion';
+import useTilt from '../hooks/useTilt';
 
 interface Metric {
   value: number;
@@ -45,6 +46,31 @@ function StatCounter({ metric, delay, reducedMotion }: { metric: Metric; delay: 
   );
 }
 
+function MetricCard({ metric, index, reducedMotion }: { metric: Metric; index: number; reducedMotion: boolean }) {
+  const tilt = useTilt(6);
+
+  return (
+    <motion.div
+      ref={tilt.ref}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-100px' }}
+      transition={{ duration: reducedMotion ? 0 : 0.6, delay: reducedMotion ? 0 : index * 0.08, ease: 'easeOut' }}
+      style={{ rotateX: tilt.rotateX, rotateY: tilt.rotateY, transformPerspective: 800 }}
+      onMouseMove={tilt.onMouseMove}
+      onMouseLeave={tilt.onMouseLeave}
+      className="flex flex-col gap-2 hover-trigger"
+    >
+      <div className="font-mono tabular-nums text-3xl md:text-5xl font-medium tracking-tight">
+        <StatCounter metric={metric} delay={index * 0.08} reducedMotion={reducedMotion} />
+      </div>
+      <p className="text-xs md:text-sm text-[#1A1A1A]/50 font-light uppercase tracking-[0.15em]">
+        {metric.label}
+      </p>
+    </motion.div>
+  );
+}
+
 export default function MetricsSection() {
   const reducedMotion = useReducedMotion();
 
@@ -54,21 +80,7 @@ export default function MetricsSection() {
         <div className="hairline mb-16" />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           {metrics.map((metric, index) => (
-            <motion.div
-              key={metric.label}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-100px' }}
-              transition={{ duration: reducedMotion ? 0 : 0.6, delay: reducedMotion ? 0 : index * 0.08, ease: 'easeOut' }}
-              className="flex flex-col gap-2"
-            >
-              <div className="font-mono tabular-nums text-3xl md:text-5xl font-medium tracking-tight">
-                <StatCounter metric={metric} delay={index * 0.08} reducedMotion={reducedMotion} />
-              </div>
-              <p className="text-xs md:text-sm text-[#1A1A1A]/50 font-light uppercase tracking-[0.15em]">
-                {metric.label}
-              </p>
-            </motion.div>
+            <MetricCard key={metric.label} metric={metric} index={index} reducedMotion={reducedMotion} />
           ))}
         </div>
       </div>
