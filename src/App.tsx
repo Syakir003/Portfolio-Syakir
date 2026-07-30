@@ -15,6 +15,7 @@ import CustomCursor from './components/CustomCursor';
 import Magnetic from './components/Magnetic';
 
 const HeroMesh = lazy(() => import('./components/HeroMesh'));
+import MetricsSection from './components/MetricsSection';
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -310,6 +311,8 @@ export default function App() {
             ))}
           </div>
         </div>
+
+        <MetricsSection />
 
         {/* About Section */}
         <section id="about" className="py-24 px-6 md:px-12">
