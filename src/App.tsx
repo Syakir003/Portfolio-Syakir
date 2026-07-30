@@ -16,6 +16,7 @@ import Magnetic from './components/Magnetic';
 const HeroMesh = lazy(() => import('./components/HeroMesh'));
 import MetricsSection from './components/MetricsSection';
 import ProjectCard from './components/ProjectCard';
+import CommandPalette, { CommandItem } from './components/CommandPalette';
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,6 +43,39 @@ export default function App() {
     { id: 'experience', label: 'Pengalaman' },
     { id: 'education', label: 'Pendidikan' },
     { id: 'certificates', label: 'Sertifikat' },
+  ];
+
+  const commandItems: CommandItem[] = [
+    ...navItems.map((item) => ({
+      id: item.id,
+      label: item.label,
+      group: 'Navigasi',
+      onSelect: () => scrollTo(item.id),
+    })),
+    {
+      id: 'email',
+      label: 'Email Saya',
+      group: 'Kontak',
+      onSelect: () => { window.location.href = 'mailto:akhmadabdullahsyakirmi1a@gmail.com'; },
+    },
+    {
+      id: 'whatsapp',
+      label: 'WhatsApp',
+      group: 'Kontak',
+      onSelect: () => window.open('https://wa.me/6282333318107', '_blank'),
+    },
+    {
+      id: 'linkedin',
+      label: 'LinkedIn',
+      group: 'Kontak',
+      onSelect: () => window.open('https://www.linkedin.com/in/akhmad-abdullah-syakir-bb49282b7/', '_blank'),
+    },
+    {
+      id: 'github',
+      label: 'GitHub',
+      group: 'Kontak',
+      onSelect: () => window.open('https://github.com/Syakir003', '_blank'),
+    },
   ];
 
   const skills = [
@@ -223,6 +257,7 @@ export default function App() {
     <div className="min-h-screen bg-[#F5F2ED] text-[#1A1A1A] font-sans">
       <div className="noise-bg" />
       <CustomCursor />
+      <CommandPalette items={commandItems} />
       <motion.div className="fixed top-0 left-0 right-0 h-0.5 bg-[#1A1A1A] origin-left z-100" style={{ scaleX }} />
       
       {/* Navigation */}
@@ -249,6 +284,9 @@ export default function App() {
                 </Magnetic>
               </React.Fragment>
             ))}
+            <span className="hidden lg:inline-block font-mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/30 border border-[#1A1A1A]/15 rounded px-2 py-1 ml-2">
+              ⌘K
+            </span>
           </div>
 
           {/* Mobile Menu Toggle */}
