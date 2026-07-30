@@ -323,17 +323,6 @@ export default function App() {
         {/* Hero Section */}
         <section className="relative z-0 min-h-screen flex flex-col justify-center pt-20 overflow-hidden">
           
-          {/* Background Photo */}
-          <div className="absolute inset-0 -z-20">
-            <img 
-              src="https://picsum.photos/seed/cyberpunk/1920/1080" 
-              alt="Hero Background" 
-              className="w-full h-full object-cover opacity-100 mix-blend-luminosity"
-              referrerPolicy="no-referrer"
-            />
-            <div className="absolute inset-0 bg-linear-to-b from-[#F5F2ED]/10 via-[#F5F2ED]/10 to-[#F5F2ED]/80" />
-          </div>
-          
           {/* Tech stack wallpaper */}
           <TechStackBackground />
 
