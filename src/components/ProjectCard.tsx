@@ -39,7 +39,7 @@ export default function ProjectCard({ project, index, isExpanded, onToggle }: Pr
       </motion.div>
       <div className="flex flex-col gap-4">
         <div className="flex justify-between items-start gap-4">
-          <h3 className="font-display font-bold text-3xl md:text-4xl group-hover:tracking-widest transition-all duration-500 uppercase">
+          <h3 className="font-display font-bold text-2xl md:text-3xl group-hover:tracking-widest transition-all duration-500 uppercase">
             {project.title}
           </h3>
           <ArrowRight
@@ -51,7 +51,7 @@ export default function ProjectCard({ project, index, isExpanded, onToggle }: Pr
         <p className="text-[#1A1A1A]/60 font-light leading-relaxed max-w-md">
           {project.description}
         </p>
-        <span className="font-mono text-[15px] uppercase tracking-[0.2em] font-medium text-[#1A1A1A]/40 mt-2">
+        <span className="font-mono text-[12px] uppercase tracking-[0.2em] font-medium text-[#1A1A1A]/40 mt-2">
           {project.date}
         </span>
 
@@ -65,7 +65,7 @@ export default function ProjectCard({ project, index, isExpanded, onToggle }: Pr
               className="mt-4 pt-6 border-t border-[#1A1A1A]/10 flex flex-col gap-4 overflow-hidden"
             >
               {project.role && (
-                <p className="text-sm font-medium text-[#1A1A1A]/80">{project.role}</p>
+                <p className="text-xs font-medium text-[#1A1A1A]/80">{project.role}</p>
               )}
               {project.techStack && (
                 <div className="flex flex-wrap gap-2">
@@ -84,7 +84,7 @@ export default function ProjectCard({ project, index, isExpanded, onToggle }: Pr
                   {project.highlights.map((point) => (
                     <li
                       key={point}
-                      className="text-sm text-[#1A1A1A]/60 font-light leading-relaxed pl-4 relative before:content-['—'] before:absolute before:left-0 before:text-[#1A1A1A]/30"
+                      className="text-xs text-[#1A1A1A]/60 font-light leading-relaxed pl-4 relative before:content-['—'] before:absolute before:left-0 before:text-[#1A1A1A]/30"
                     >
                       {point}
                     </li>

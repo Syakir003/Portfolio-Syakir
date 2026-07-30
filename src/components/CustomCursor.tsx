@@ -92,7 +92,7 @@ export default function CustomCursor() {
             className="fixed top-0 left-0 w-[120px] h-[120px] rounded-sm overflow-hidden pointer-events-none z-9997 shadow-2xl"
           >
             <img src={preview.image} alt="" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
-            <span className="absolute bottom-1 right-1 font-mono text-[9px] uppercase tracking-widest bg-[#1A1A1A] text-[#F5F2ED] px-1.5 py-0.5 rounded-sm">
+            <span className="absolute bottom-1 right-1 font-mono text-[8px] uppercase tracking-widest bg-[#1A1A1A] text-[#F5F2ED] px-1.5 py-0.5 rounded-sm">
               {preview.label}
             </span>
           </motion.div>

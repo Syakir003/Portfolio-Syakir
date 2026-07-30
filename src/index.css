@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Outfit:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
 @import "tailwindcss";
 
 
@@ -6,7 +6,7 @@
   --font-sans: "Outfit", sans-serif;
   --font-display: "Space Grotesk", sans-serif;
   --font-serif: "Playfair Display", serif;
-  --font-mono: "JetBrains Mono", monospace;
+  --font-mono: "Space Mono", monospace;
 }
 
 :root {

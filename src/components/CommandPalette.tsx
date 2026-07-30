@@ -96,11 +96,11 @@ export default function CommandPalette({ items }: CommandPaletteProps) {
                 placeholder="Ketik untuk mencari..."
                 className="flex-1 bg-transparent outline-none text-[#1A1A1A] placeholder:text-[#1A1A1A]/30 font-light"
               />
-              <span className="font-mono text-[10px] uppercase tracking-widest text-[#1A1A1A]/30 border border-[#1A1A1A]/15 rounded px-1.5 py-0.5">Esc</span>
+              <span className="font-mono text-[9px] uppercase tracking-widest text-[#1A1A1A]/30 border border-[#1A1A1A]/15 rounded px-1.5 py-0.5">Esc</span>
             </div>
             <div className="max-h-80 overflow-y-auto py-2">
               {filtered.length === 0 && (
-                <p className="px-5 py-6 text-sm text-[#1A1A1A]/40 font-light">Tidak ada hasil.</p>
+                <p className="px-5 py-6 text-xs text-[#1A1A1A]/40 font-light">Tidak ada hasil.</p>
               )}
               {filtered.map((item, index) => (
                 <button
@@ -115,7 +115,7 @@ export default function CommandPalette({ items }: CommandPaletteProps) {
                   }`}
                 >
                   <span className="text-[#1A1A1A] font-light">{item.label}</span>
-                  <span className="font-mono text-[10px] uppercase tracking-widest text-[#1A1A1A]/30">{item.group}</span>
+                  <span className="font-mono text-[9px] uppercase tracking-widest text-[#1A1A1A]/30">{item.group}</span>
                 </button>
               ))}
             </div>

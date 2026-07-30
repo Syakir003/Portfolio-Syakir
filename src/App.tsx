@@ -266,7 +266,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
           <button 
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="font-display font-bold text-2xl tracking-tighter hover:opacity-70 transition-opacity hover-trigger uppercase"
+            className="font-display font-bold text-xl tracking-tighter hover:opacity-70 transition-opacity hover-trigger uppercase"
           >
             Portfolio Syakir
           </button>
@@ -278,14 +278,14 @@ export default function App() {
                 <Magnetic>
                   <button
                     onClick={() => scrollTo(item.id)}
-                    className="text-[15px] uppercase tracking-[0.25em] font-medium text-[#1A1A1A]/60 hover:text-[#1A1A1A] transition-colors hover-trigger p-2"
+                    className="text-[12px] uppercase tracking-[0.25em] font-medium text-[#1A1A1A]/60 hover:text-[#1A1A1A] transition-colors hover-trigger p-2"
                   >
                     {item.label}
                   </button>
                 </Magnetic>
               </React.Fragment>
             ))}
-            <span className="hidden lg:inline-block font-mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/30 border border-[#1A1A1A]/15 rounded px-2 py-1 ml-2">
+            <span className="hidden lg:inline-block font-mono text-[10px] uppercase tracking-widest text-[#1A1A1A]/30 border border-[#1A1A1A]/15 rounded px-2 py-1 ml-2">
               ⌘K
             </span>
           </div>
@@ -310,7 +310,7 @@ export default function App() {
               <button
                 key={item.id}
                 onClick={() => scrollTo(item.id)}
-                className="font-display font-bold text-4xl uppercase tracking-widest text-[#1A1A1A] hover:text-[#1A1A1A]/50 transition-colors hover-trigger"
+                className="font-display font-bold text-3xl uppercase tracking-widest text-[#1A1A1A] hover:text-[#1A1A1A]/50 transition-colors hover-trigger"
               >
                 {item.label}
               </button>
@@ -348,12 +348,12 @@ export default function App() {
               </h1>
               
               <motion.div variants={fadeUp} className="mt-8 md:mt-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
-                <p className="text-lg md:text-xl text-[#1A1A1A]/60 font-light max-w-md leading-relaxed">
+                <p className="text-base md:text-lg text-[#1A1A1A]/60 font-light max-w-md leading-relaxed">
                   Fullstack developer & project lead crafting elegant, functional digital experiences — from architecture to deployment.
                 </p>
                 <div className="flex gap-6">
-                  <button onClick={() => scrollTo('projects')} className="font-mono text-[20px] uppercase tracking-[0.2em] font-medium border-b border-[#1A1A1A]/30 pb-1 hover:border-[#1A1A1A] transition-colors hover-trigger">Lihat Proyek</button>
-                  <button onClick={() => scrollTo('contact')} className="font-mono text-[20px] uppercase tracking-[0.2em] font-medium border-b border-[#1A1A1A]/30 pb-1 hover:border-[#1A1A1A] transition-colors hover-trigger">Hubungi Saya</button>
+                  <button onClick={() => scrollTo('projects')} className="font-mono text-[15px] uppercase tracking-[0.2em] font-medium border-b border-[#1A1A1A]/30 pb-1 hover:border-[#1A1A1A] transition-colors hover-trigger">Lihat Proyek</button>
+                  <button onClick={() => scrollTo('contact')} className="font-mono text-[15px] uppercase tracking-[0.2em] font-medium border-b border-[#1A1A1A]/30 pb-1 hover:border-[#1A1A1A] transition-colors hover-trigger">Hubungi Saya</button>
                 </div>
               </motion.div>
             </motion.div>
@@ -364,7 +364,7 @@ export default function App() {
         <div className="w-full overflow-hidden py-8 border-y border-[#1A1A1A]/10 bg-[#EAE6DF] transform -rotate-1 my-20">
           <div className="flex whitespace-nowrap animate-marquee">
             {[...Array(4)].map((_, i) => (
-              <span key={i} className="text-3xl md:text-5xl font-display font-bold uppercase tracking-widest mx-8 text-[#1A1A1A]/70">
+              <span key={i} className="text-2xl md:text-4xl font-display font-bold uppercase tracking-widest mx-8 text-[#1A1A1A]/70">
                 Fullstack Developer <span className="text-[#1A1A1A]/20 mx-4 font-sans font-normal">•</span> Project Lead <span className="text-[#1A1A1A]/20 mx-4 font-sans font-normal">•</span> Problem Solver <span className="text-[#1A1A1A]/20 mx-4 font-sans font-normal">•</span>
               </span>
             ))}
@@ -378,14 +378,14 @@ export default function App() {
           <div className="max-w-7xl mx-auto">
             <div className="grid md:grid-cols-12 gap-12">
               <div className="md:col-span-4">
-                <h2 className="font-mono text-[45px] uppercase tracking-[0.2em] font-medium text-[#1A1A1A]/80">
+                <h2 className="font-mono text-[32px] uppercase tracking-[0.2em] font-medium text-[#1A1A1A]/80">
                   Biography
                 </h2>
               </div>
               <div className="md:col-span-8">
                 <motion.p 
                   initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp}
-                  className="font-display font-medium text-3xl md:text-4xl lg:text-3xl leading-snug text-[#1A1A1A] mb-16 tracking-tight"
+                  className="font-display font-medium text-2xl md:text-3xl lg:text-2xl leading-snug text-[#1A1A1A] mb-16 tracking-tight"
                 >Mahasiswa D3 Manajemen Informatika di Politeknik Negeri Malang dengan pengalaman fullstack development menggunakan Laravel, React, Vue.js, dan Node.js.
                   Pernah memimpin tim 3 developer mengerjakan project klien senilai 30+ juta, mencakup Web + Mobile E-POS, platform E-Commerce, dan Company Profile — dari planning hingga deployment.
                   Berpengalaman menangani payment gateway integration, authentication system, dan real-time dashboard, termasuk mewarisi dan menstabilkan aplikasi produksi dengan memperbaiki 150+ bug.
@@ -396,12 +396,12 @@ export default function App() {
                 <motion.div 
                   initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp}
                 >
-                  <h3 className="font-mono text-[20px] uppercase tracking-[0.2em] font-medium text-[#1A1A1A]/50 mb-6">Skills</h3>
+                  <h3 className="font-mono text-[15px] uppercase tracking-[0.2em] font-medium text-[#1A1A1A]/50 mb-6">Skills</h3>
                   <div className="flex flex-wrap gap-3">
                     {skills.map((skill) => (
                       <span 
                         key={skill}
-                        className="px-8 py-4 border border-[#1A1A1A]/10 rounded-full text-base md:text-lg font-medium tracking-wide text-[#1A1A1A]/80 hover:bg-[#1A1A1A] hover:text-[#F5F2ED] transition-all duration-300 hover-trigger"
+                        className="px-8 py-4 border border-[#1A1A1A]/10 rounded-full text-sm md:text-base font-medium tracking-wide text-[#1A1A1A]/80 hover:bg-[#1A1A1A] hover:text-[#F5F2ED] transition-all duration-300 hover-trigger"
                       >
                         {skill}
                       </span>
@@ -418,8 +418,8 @@ export default function App() {
           <div className="max-w-7xl mx-auto">
             <div className="hairline mb-16" />
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-6">
-              <h2 className="font-display font-bold text-5xl md:text-7xl tracking-tighter uppercase">Proyek Saya</h2>
-              <p className="font-mono text-[20px] uppercase tracking-[0.2em] font-medium text-[#1A1A1A]/50">2024 — 2026</p>
+              <h2 className="font-display font-bold text-4xl md:text-6xl tracking-tighter uppercase">Proyek Saya</h2>
+              <p className="font-mono text-[15px] uppercase tracking-[0.2em] font-medium text-[#1A1A1A]/50">2024 — 2026</p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-12 md:gap-20">
@@ -443,7 +443,7 @@ export default function App() {
               
               {/* Experience */}
               <div id="experience">
-                <h2 className="font-display font-bold text-5xl md:text-7xl tracking-tighter uppercase">Pengalaman</h2>
+                <h2 className="font-display font-bold text-4xl md:text-6xl tracking-tighter uppercase">Pengalaman</h2>
                 <div className="flex flex-col gap-16">
                   {experiences.map((exp, index) => (
                     <motion.div 
@@ -454,14 +454,14 @@ export default function App() {
                     >
                       <div className="hairline mb-8 group-hover:bg-[#1A1A1A]/20 transition-colors" />
                       <div className="flex flex-col md:flex-row md:items-baseline justify-between mb-4 gap-2">
-                        <h3 className="font-display font-bold text-3xl group-hover:tracking-widest transition-all duration-500 uppercase">{exp.title}</h3>
-                        <span className="font-mono text-[20px] uppercase tracking-[0.2em] font-medium text-[#1A1A1A]/40 whitespace-nowrap">
+                        <h3 className="font-display font-bold text-2xl group-hover:tracking-widest transition-all duration-500 uppercase">{exp.title}</h3>
+                        <span className="font-mono text-[15px] uppercase tracking-[0.2em] font-medium text-[#1A1A1A]/40 whitespace-nowrap">
                           {exp.date}
                         </span>
                       </div>
                       <p className="text-[#1A1A1A]/80 font-medium mb-2">{exp.organization}</p>
                       {exp.description && (
-                        <p className="text-[#1A1A1A]/60 font-light mb-8 leading-relaxed text-sm">{exp.description}</p>
+                        <p className="text-[#1A1A1A]/60 font-light mb-8 leading-relaxed text-xs">{exp.description}</p>
                       )}
                       
                       <div className="grid grid-cols-3 gap-4">
@@ -483,7 +483,7 @@ export default function App() {
 
               {/* Education */}
               <div id="education">
-                <h2 className="font-display font-bold text-5xl md:text-7xl tracking-tighter uppercase">Pendidikan</h2>
+                <h2 className="font-display font-bold text-4xl md:text-6xl tracking-tighter uppercase">Pendidikan</h2>
                 <div className="flex flex-col gap-16">
                   {educations.map((edu, index) => (
                     <motion.div 
@@ -502,14 +502,14 @@ export default function App() {
                         />
                       </div>
                       <div className="flex flex-col md:flex-row md:items-baseline justify-between gap-2">
-                        <h3 className="font-display font-bold text-3xl group-hover:tracking-widest transition-all duration-500 uppercase">{edu.school}</h3>
-                        <span className="font-mono text-[20px] uppercase tracking-[0.2em] font-medium text-[#1A1A1A]/40 whitespace-nowrap">
+                        <h3 className="font-display font-bold text-2xl group-hover:tracking-widest transition-all duration-500 uppercase">{edu.school}</h3>
+                        <span className="font-mono text-[15px] uppercase tracking-[0.2em] font-medium text-[#1A1A1A]/40 whitespace-nowrap">
                           {edu.date}
                         </span>
                       </div>
                       <p className="text-[#1A1A1A]/80 font-medium mt-4 mb-2">{edu.major}</p>
                       {edu.description && (
-                        <p className="text-[#1A1A1A]/60 font-light leading-relaxed text-sm">{edu.description}</p>
+                        <p className="text-[#1A1A1A]/60 font-light leading-relaxed text-xs">{edu.description}</p>
                       )}
                     </motion.div>
                   ))}
@@ -525,7 +525,7 @@ export default function App() {
           <div className="max-w-7xl mx-auto">
             <div className="hairline mb-16" />
             <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-6">
-              <h2 className="font-display font-bold text-5xl md:text-7xl tracking-tighter uppercase">Sertifikasi</h2>
+              <h2 className="font-display font-bold text-4xl md:text-6xl tracking-tighter uppercase">Sertifikasi</h2>
             </div>
 
             <div className="grid md:grid-cols-3 gap-x-12 gap-y-16">
@@ -544,15 +544,15 @@ export default function App() {
                       referrerPolicy="no-referrer"
                     />
                   </div>
-                  <h3 className="font-display font-bold text-2xl mb-4 leading-snug group-hover:tracking-widest transition-all duration-500 uppercase">
+                  <h3 className="font-display font-bold text-xl mb-4 leading-snug group-hover:tracking-widest transition-all duration-500 uppercase">
                     {cert.title}
                   </h3>
                   <div className="flex flex-col gap-2 mb-4">
-                    <p className="text-[#1A1A1A]/80 font-medium text-sm">{cert.issuer}</p>
-                    <p className="font-mono text-[20px] uppercase tracking-[0.2em] font-medium text-[#1A1A1A]/40">{cert.date}</p>
+                    <p className="text-[#1A1A1A]/80 font-medium text-xs">{cert.issuer}</p>
+                    <p className="font-mono text-[15px] uppercase tracking-[0.2em] font-medium text-[#1A1A1A]/40">{cert.date}</p>
                   </div>
                   {cert.description && (
-                    <p className="text-[#1A1A1A]/60 font-light leading-relaxed text-sm">{cert.description}</p>
+                    <p className="text-[#1A1A1A]/60 font-light leading-relaxed text-xs">{cert.description}</p>
                   )}
                 </motion.div>
               ))}
@@ -570,8 +570,8 @@ export default function App() {
               className="flex flex-col md:flex-row justify-between items-start gap-16"
             >
               <div className="max-w-2xl">
-                <h2 className="font-display font-bold text-6xl md:text-8xl mb-8 leading-none tracking-tighter uppercase">Mari Kita Membangun<br/><span className="text-[#1A1A1A]/50">bersama.</span></h2>
-                <p className="text-xl text-[#1A1A1A]/60 font-light">Membangun pengalaman digital yang bermakna. Mari berkolaborasi.</p>
+                <h2 className="font-display font-bold text-5xl md:text-7xl mb-8 leading-none tracking-tighter uppercase">Mari Kita Membangun<br/><span className="text-[#1A1A1A]/50">bersama.</span></h2>
+                <p className="text-lg text-[#1A1A1A]/60 font-light">Membangun pengalaman digital yang bermakna. Mari berkolaborasi.</p>
               </div>
 
               <div className="flex flex-col gap-8 min-w-200px">
@@ -580,7 +580,7 @@ export default function App() {
                     <div className="w-12 h-12 rounded-full border border-[#1A1A1A]/20 flex items-center justify-center group-hover:bg-[#1A1A1A] group-hover:text-[#F5F2ED] transition-all duration-300">
                       <Mail size={18} strokeWidth={1.5} />
                     </div>
-                    <span className="font-light text-lg group-hover:translate-x-2 transition-transform duration-300">Email Me</span>
+                    <span className="font-light text-base group-hover:translate-x-2 transition-transform duration-300">Email Me</span>
                   </a>
                 </Magnetic>
                 <Magnetic>
@@ -588,7 +588,7 @@ export default function App() {
                     <div className="w-12 h-12 rounded-full border border-[#1A1A1A]/20 flex items-center justify-center group-hover:bg-[#1A1A1A] group-hover:text-[#F5F2ED] transition-all duration-300">
                       <Phone size={18} strokeWidth={1.5} />
                     </div>
-                    <span className="font-light text-lg group-hover:translate-x-2 transition-transform duration-300">+62 823-3331-8107</span>
+                    <span className="font-light text-base group-hover:translate-x-2 transition-transform duration-300">+62 823-3331-8107</span>
                   </a>
                 </Magnetic>
                 <Magnetic>
@@ -596,7 +596,7 @@ export default function App() {
                     <div className="w-12 h-12 rounded-full border border-[#1A1A1A]/20 flex items-center justify-center group-hover:bg-[#1A1A1A] group-hover:text-[#F5F2ED] transition-all duration-300">
                       <MapPin size={18} strokeWidth={1.5} />
                     </div>
-                    <span className="font-light text-lg group-hover:translate-x-2 transition-transform duration-300">Mojokerto, Jawa Timur</span>
+                    <span className="font-light text-base group-hover:translate-x-2 transition-transform duration-300">Mojokerto, Jawa Timur</span>
                   </div>
                 </Magnetic>
                 <Magnetic>
@@ -604,7 +604,7 @@ export default function App() {
                     <div className="w-12 h-12 rounded-full border border-[#1A1A1A]/20 flex items-center justify-center group-hover:bg-[#1A1A1A] group-hover:text-[#F5F2ED] transition-all duration-300">
                       <Linkedin size={18} strokeWidth={1.5} />
                     </div>
-                    <span className="font-light text-lg group-hover:translate-x-2 transition-transform duration-300">LinkedIn</span>
+                    <span className="font-light text-base group-hover:translate-x-2 transition-transform duration-300">LinkedIn</span>
                   </a>
                 </Magnetic>
                 <Magnetic>
@@ -612,7 +612,7 @@ export default function App() {
                      <div className="w-12 h-12 rounded-full border border-[#1A1A1A]/20 flex items-center justify-center group-hover:bg-[#1A1A1A] group-hover:text-[#F5F2ED] transition-all duration-300">
                        <Github size={18} strokeWidth={1.5} />
                      </div>
-                     <span className="font-light text-lg group-hover:translate-x-2 transition-transform duration-300">Github</span>
+                     <span className="font-light text-base group-hover:translate-x-2 transition-transform duration-300">Github</span>
                    </a>
                 </Magnetic>
               </div>
@@ -623,9 +623,9 @@ export default function App() {
 
       {/* Footer */}
       <footer className="py-12 px-6 md:px-12 border-t border-[#1A1A1A]/10 bg-[#F5F2ED]">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 font-mono text-[10px] uppercase tracking-[0.2em] font-medium text-[#1A1A1A]/40">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 font-mono text-[9px] uppercase tracking-[0.2em] font-medium text-[#1A1A1A]/40">
           <p>© 2026 Akhmad Abdullah Syakir.</p>
-          <p>Designed by <span className="font-display font-bold text-sm text-[#1A1A1A]/60">Syakir</span>.</p>
+          <p>Designed by <span className="font-display font-bold text-xs text-[#1A1A1A]/60">Syakir</span>.</p>
         </div>
       </footer>
     </div>

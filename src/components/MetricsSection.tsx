@@ -62,10 +62,10 @@ export default function MetricsSection() {
               transition={{ duration: reducedMotion ? 0 : 0.6, delay: reducedMotion ? 0 : index * 0.08, ease: 'easeOut' }}
               className="flex flex-col gap-2"
             >
-              <div className="font-mono tabular-nums text-4xl md:text-6xl font-medium tracking-tight">
+              <div className="font-mono tabular-nums text-3xl md:text-5xl font-medium tracking-tight">
                 <StatCounter metric={metric} delay={index * 0.08} reducedMotion={reducedMotion} />
               </div>
-              <p className="text-sm md:text-base text-[#1A1A1A]/50 font-light uppercase tracking-[0.15em]">
+              <p className="text-xs md:text-sm text-[#1A1A1A]/50 font-light uppercase tracking-[0.15em]">
                 {metric.label}
               </p>
             </motion.div>
